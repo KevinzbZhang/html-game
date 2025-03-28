@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古风村庄探索</title>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2B48C;
+            --text-color: #333;
+            --light-text: #F5F5DC;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'SimSun', '宋体', serif;
+        }
+        
+        body {
+            background-color: #F5F5DC;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: url('https://img.freepik.com/free-vector/chinese-watercolor-mountain-landscape-background_52683-69025.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(245, 245, 220, 0.9);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+            margin-bottom: 30px;
+            border: 1px solid var(--primary-color);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .game-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .scene-description {
+            background-color: var(--light-text);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: var(--shadow);
+            min-height: 150px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .options-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .option-btn {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            text-align: left;
+        }
+        
+        .option-btn:hover {
+            background-color: #A0522D;
+            transform: translateY(-2px);
+        }
+        
+        .option-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .custom-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .custom-input input {
+            flex: 1;
+            padding: 12px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .custom-input button {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .custom-input button:hover {
+            background-color: #CDAA7D;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .spinner {
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid var(--primary-color);
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .login-container {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .login-container input {
+            padding: 12px;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-right: 10px;
+            width: 200px;
+        }
+        
+        .login-container button {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+        
+        .login-container button:hover {
+            background-color: #A0522D;
+        }
+        
+        .error-message {
+            color: #D32F2F;
+            margin-top: 10px;
+        }
+        
+        .game-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--primary-color);
+        }
+        
+        .history-btn, .reset-btn {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .history-btn:hover, .reset-btn:hover {
+            background-color: #CDAA7D;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: var(--light-text);
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 700px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+        
+        .history-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--primary-color);
+        }
+        
+        .history-item:last-child {
+            border-bottom: none;
+        }
+        
+        .history-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .npc-info {
+            background-color: rgba(210, 180, 140, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .npc-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .custom-input {
+                flex-direction: column;
+            }
+            
+            .custom-input button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="login-screen" class="login-container">
+            <h1>古风村庄探索</h1>
+            <p>请输入游戏密钥开始您的旅程</p>
+            <input type="password" id="game-key" placeholder="输入游戏密钥">
+            <button id="start-game">开始游戏</button>
+            <div id="key-error" class="error-message"></div>
+        </div>
+        
+        <div id="game-screen" style="display: none;">
+            <header>
+                <h1>古风村庄探索</h1>
+                <p id="location-indicator">当前位置: 村口</p>
+            </header>
+            
+            <div class="game-area">
+                <div class="scene-description" id="scene-text">
+                    欢迎来到古风村庄探索游戏，请稍等...
+                </div>
+                
+                <div class="npc-info" id="npc-info" style="display: none;">
+                    <div class="npc-title">NPC信息</div>
+                    <div id="npc-details"></div>
+                </div>
+                
+                <div class="options-container" id="options-container">
+                    <!-- 选项将在这里动态生成 -->
+                </div>
+                
+                <div class="custom-input" id="custom-input" style="display: none;">
+                    <input type="text" id="user-input" placeholder="输入你的回应...">
+                    <button id="submit-response">发送</button>
+                </div>
+                
+                <div class="status-indicator" id="status-indicator" style="display: none;">
+                    <div class="spinner"></div>
+                    <span id="status-text">正在生成故事...</span>
+                </div>
+            </div>
+            
+            <div class="game-controls">
+                <button class="history-btn" id="history-btn">游玩记录</button>
+                <button class="reset-btn" id="reset-btn">重置游戏</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal" id="history-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-history">&times;</span>
+            <h2>游玩记录</h2>
+            <div id="history-list">
+                <!-- 历史记录将在这里显示 -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 游戏状态
+        const gameState = {
+            currentScene: null,
+            npcs: {},
+            history: [],
+            currentSession: {
+                scenes: [],
+                startTime: null,
+                endTime: null
+            },
+            apiKey: "sk-rqfksabdnfqsdoiidifygdmkjzvhsfxcupzodalwikxrmajp",
+            apiUrl: "https://api.siliconflow.cn/v1/chat/completions",
+            model: "THUDM/glm-4-9b-chat"
+        };
+        
+        // DOM元素
+        const loginScreen = document.getElementById('login-screen');
+        const gameScreen = document.getElementById('game-screen');
+        const gameKeyInput = document.getElementById('game-key');
+        const startGameBtn = document.getElementById('start-game');
+        const keyError = document.getElementById('key-error');
+        const sceneText = document.getElementById('scene-text');
+        const optionsContainer = document.getElementById('options-container');
+        const customInput = document.getElementById('custom-input');
+        const userInput = document.getElementById('user-input');
+        const submitResponse = document.getElementById('submit-response');
+        const statusIndicator = document.getElementById('status-indicator');
+        const statusText = document.getElementById('status-text');
+        const locationIndicator = document.getElementById('location-indicator');
+        const npcInfo = document.getElementById('npc-info');
+        const npcDetails = document.getElementById('npc-details');
+        const historyBtn = document.getElementById('history-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const historyModal = document.getElementById('history-modal');
+        const closeHistory = document.getElementById('close-history');
+        const historyList = document.getElementById('history-list');
+        
+        // 事件监听器
+        startGameBtn.addEventListener('click', startGame);
+        submitResponse.addEventListener('click', handleCustomInput);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleCustomInput();
+        });
+        historyBtn.addEventListener('click', showHistory);
+        resetBtn.addEventListener('click', resetGame);
+        closeHistory.addEventListener('click', () => {
+            historyModal.style.display = 'none';
+        });
+        
+        // 点击模态框外部关闭
+        window.addEventListener('click', (e) => {
+            if (e.target === historyModal) {
+                historyModal.style.display = 'none';
+            }
+        });
+        
+        // 开始游戏
+        function startGame() {
+            const key = gameKeyInput.value.trim();
+            if (key === '作者最帅') {
+                keyError.textContent = '';
+                loginScreen.style.display = 'none';
+                gameScreen.style.display = 'block';
+                gameState.currentSession.startTime = new Date();
+                initializeGame();
+            } else {
+                keyError.textContent = '密钥不正确，请重新输入';
+            }
+        }
+        
+        // 初始化游戏
+        function initializeGame() {
+            showStatus('正在生成初始场景...');
+            
+            const prompt = `你是一个古风村庄探索游戏的AI叙事者。请为玩家生成游戏的第一个场景，描述玩家来到一个古风村庄的村口所见所闻。
+            
+            要求：
+            1. 描述村庄的环境、氛围和特色
+            2. 提供2-3个选项让玩家选择下一步行动
+            3. 可以暗示村庄中可能存在的秘密或主线剧情
+            4. 使用中文，语言优美，富有古风韵味
+            
+            输出格式：
+            {
+                "scene": "场景描述文本",
+                "options": ["选项1", "选项2", "选项3"],
+                "location": "位置名称",
+                "hint": "对主线剧情的暗示"
+            }`;
+            
+            callAI(prompt).then(response => {
+                try {
+                    const data = JSON.parse(response);
+                    updateScene(data);
+                    addToHistory('游戏开始', data.scene);
+                } catch (e) {
+                    console.error("解析AI响应失败:", e);
+                    sceneText.innerHTML = "游戏初始化失败，请稍后再试。<br><br>错误信息: " + e.message;
+                }
+            }).catch(error => {
+                console.error("AI调用失败:", error);
+                sceneText.innerHTML = "无法连接到游戏服务器，请检查网络连接后重试。";
+            }).finally(() => {
+                hideStatus();
+            });
+        }
+        
+        // 更新场景
+        function updateScene(data) {
+            gameState.currentScene = data;
+            sceneText.innerHTML = data.scene;
+            locationIndicator.textContent = `当前位置: ${data.location}`;
+            
+            // 如果有NPC信息，显示
+            if (data.npc) {
+                npcDetails.innerHTML = `<strong>${data.npc.name}</strong><br>${data.npc.description}`;
+                npcInfo.style.display = 'block';
+                
+                // 添加到NPC列表
+                if (!gameState.npcs[data.npc.name]) {
+                    gameState.npcs[data.npc.name] = data.npc;
+                }
+            } else {
+                npcInfo.style.display = 'none';
+            }
+            
+            // 清空选项容器
+            optionsContainer.innerHTML = '';
+            
+            // 添加选项按钮
+            if (data.options && data.options.length > 0) {
+                data.options.forEach((option, index) => {
+                    const btn = document.createElement('button');
+                    btn.className = 'option-btn';
+                    btn.textContent = option;
+                    btn.addEventListener('click', () => selectOption(index));
+                    optionsContainer.appendChild(btn);
+                });
+                
+                // 显示自定义输入提示
+                const customPrompt = document.createElement('div');
+                customPrompt.style.marginTop = '10px';
+                customPrompt.style.fontStyle = 'italic';
+                customPrompt.textContent = '或者，你也可以直接输入你想说的话或行动...';
+                optionsContainer.appendChild(customPrompt);
+                
+                // 显示自定义输入框
+                customInput.style.display = 'flex';
+                userInput.focus();
+            } else {
+                customInput.style.display = 'none';
+            }
+            
+            // 添加到当前会话记录
+            gameState.currentSession.scenes.push({
+                scene: data.scene,
+                options: data.options,
+                timestamp: new Date()
+            });
+        }
+        
+        // 选择选项
+        function selectOption(index) {
+            const selectedOption = gameState.currentScene.options[index];
+            addToHistory('你的选择', selectedOption);
+            
+            showStatus('正在生成下一场景...');
+            disableOptions();
+            
+            // 构建提示词
+            let prompt = `作为古风村庄探索游戏的AI叙事者，玩家刚刚选择了"${selectedOption}"。
+            
+            之前的情节:
+            ${gameState.currentScene.scene}
+            
+            玩家选择: ${selectedOption}
+            
+            请根据这个选择生成下一场景:
+            1. 详细描述场景变化和发生的事情
+            2. 提供2-3个新的选项
+            3. 保持古风语言风格
+            4. 如果遇到NPC，生成NPC的姓名、外貌、性格描述
+            5. 逐步揭示村庄的秘密或主线剧情
+            
+            输出格式:
+            {
+                "scene": "场景描述文本",
+                "options": ["选项1", "选项2", "选项3"],
+                "location": "位置名称",
+                "npc": {
+                    "name": "NPC姓名",
+                    "description": "NPC外貌和性格描述"
+                },
+                "hint": "对主线剧情的进一步暗示"
+            }`;
+            
+            // 如果有NPC，添加到提示词
+            if (gameState.currentScene.npc) {
+                prompt += `\n\n当前NPC: ${JSON.stringify(gameState.currentScene.npc)}`;
+            }
+            
+            // 调用AI生成下一场景
+            callAI(prompt).then(response => {
+                try {
+                    const data = JSON.parse(response);
+                    updateScene(data);
+                    
+                    // 检查是否是结局
+                    if (data.isEnding) {
+                        gameState.currentSession.endTime = new Date();
+                        addToHistory('游戏结束', data.scene);
+                    }
+                } catch (e) {
+                    console.error("解析AI响应失败:", e);
+                    sceneText.innerHTML = "场景生成失败，请稍后再试。<br><br>错误信息: " + e.message;
+                }
+            }).catch(error => {
+                console.error("AI调用失败:", error);
+                sceneText.innerHTML = "无法生成下一场景，请检查网络连接后重试。";
+            }).finally(() => {
+                hideStatus();
+            });
+        }
+        
+        // 处理自定义输入
+        function handleCustomInput() {
+            const inputText = userInput.value.trim();
+            if (!inputText) return;
+            
+            addToHistory('你的话语', inputText);
+            userInput.value = '';
+            showStatus('正在生成回应...');
+            disableOptions();
+            
+            // 构建提示词
+            let prompt = `作为古风村庄探索游戏的AI叙事者，玩家没有选择预设选项，而是说了:"${inputText}"。
+            
+            当前场景:
+            ${gameState.currentScene.scene}
+            
+            玩家输入: ${inputText}
+            
+            请根据玩家的输入生成适当的回应和场景发展:
+            1. 首先回应玩家的话语
+            2. 描述场景的任何变化
+            3. 提供2-3个新的选项
+            4. 保持古风语言风格
+            5. 如果引入新NPC，提供其描述
+            
+            输出格式:
+            {
+                "scene": "场景描述文本(包含对玩家输入的回应)",
+                "options": ["选项1", "选项2", "选项3"],
+                "location": "位置名称",
+                "npc": {
+                    "name": "NPC姓名",
+                    "description": "NPC外貌和性格描述"
+                },
+                "hint": "对主线剧情的进一步暗示"
+            }`;
+            
+            // 如果有NPC，添加到提示词
+            if (gameState.currentScene.npc) {
+                prompt += `\n\n当前NPC: ${JSON.stringify(gameState.currentScene.npc)}`;
+            }
+            
+            // 调用AI生成回应
+            callAI(prompt).then(response => {
+                try {
+                    const data = JSON.parse(response);
+                    updateScene(data);
+                } catch (e) {
+                    console.error("解析AI响应失败:", e);
+                    sceneText.innerHTML = "回应生成失败，请稍后再试。<br><br>错误信息: " + e.message;
+                }
+            }).catch(error => {
+                console.error("AI调用失败:", error);
+                sceneText.innerHTML = "无法生成回应，请检查网络连接后重试。";
+            }).finally(() => {
+                hideStatus();
+            });
+        }
+        
+        // 调用AI接口
+        async function callAI(prompt) {
+            const response = await fetch(gameState.apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${gameState.apiKey}`
+                },
+                body: JSON.stringify({
+                    model: gameState.model,
+                    messages: [
+                        {
+                            role: 'user',
+                            content: prompt
+                        }
+                    ],
+                    temperature: 0.7,
+                    max_tokens: 2000
+                })
+            });
+            
+            if (!response.ok) {
+                throw new Error(`API请求失败: ${response.status}`);
+            }
+            
+            const data = await response.json();
+            return data.choices[0].message.content;
+        }
+        
+        // 显示状态指示器
+        function showStatus(message) {
+            statusText.textContent = message;
+            statusIndicator.style.display = 'flex';
+        }
+        
+        // 隐藏状态指示器
+        function hideStatus() {
+            statusIndicator.style.display = 'none';
+        }
+        
+        // 禁用所有选项按钮
+        function disableOptions() {
+            const buttons = optionsContainer.querySelectorAll('.option-btn');
+            buttons.forEach(btn => {
+                btn.disabled = true;
+            });
+            submitResponse.disabled = true;
+        }
+        
+        // 添加到历史记录
+        function addToHistory(type, content) {
+            gameState.history.push({
+                type,
+                content,
+                timestamp: new Date()
+            });
+        }
+        
+        // 显示历史记录
+        function showHistory() {
+            historyList.innerHTML = '';
+            
+            if (gameState.history.length === 0) {
+                historyList.innerHTML = '<p>暂无历史记录</p>';
+            } else {
+                gameState.history.forEach((item, index) => {
+                    const historyItem = document.createElement('div');
+                    historyItem.className = 'history-item';
+                    
+                    const title = document.createElement('div');
+                    title.className = 'history-title';
+                    title.textContent = `${index + 1}. ${item.type}`;
+                    
+                    const content = document.createElement('div');
+                    content.textContent = item.content;
+                    
+                    const time = document.createElement('div');
+                    time.style.fontSize = '0.8rem';
+                    time.style.color = '#666';
+                    time.textContent = item.timestamp.toLocaleString();
+                    
+                    historyItem.appendChild(title);
+                    historyItem.appendChild(content);
+                    historyItem.appendChild(time);
+                    historyList.appendChild(historyItem);
+                });
+            }
+            
+            historyModal.style.display = 'flex';
+        }
+        
+        // 重置游戏
+        function resetGame() {
+            if (confirm('确定要重置游戏吗？这将清除当前进度，但历史记录会保留。')) {
+                gameState.currentScene = null;
+                gameState.npcs = {};
+                gameState.currentSession = {
+                    scenes: [],
+                    startTime: new Date(),
+                    endTime: null
+                };
+                
+                sceneText.textContent = '正在重新初始化游戏...';
+                optionsContainer.innerHTML = '';
+                customInput.style.display = 'none';
+                npcInfo.style.display = 'none';
+                
+                initializeGame();
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #519ce9; -webkit-text-stroke: #519ce9; background-color: #12151a}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #88b966; -webkit-text-stroke: #88b966; background-color: #12151a}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #d65562; -webkit-text-stroke: #d65562; background-color: #12151a}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #9ba2b1; -webkit-text-stroke: #9ba2b1; background-color: #12151a}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #c58853; -webkit-text-stroke: #c58853; background-color: #12151a}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #9ba2b1; -webkit-text-stroke: #9ba2b1; background-color: #12151a; min-height: 15.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #4a505d; -webkit-text-stroke: #4a505d; background-color: #12151a}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.9px '.AppleSystemUIFontMonospaced'; color: #88b966; -webkit-text-stroke: #88b966; background-color: #12151a; min-height: 15.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #b85dd5; -webkit-text-stroke: 0px #b85dd5}
+    span.s3 {font-kerning: none; color: #9ba2b1; -webkit-text-stroke: 0px #9ba2b1}
+    span.s4 {font-kerning: none; color: #d65562; -webkit-text-stroke: 0px #d65562}
+    span.s5 {font-kerning: none; color: #c58853; -webkit-text-stroke: 0px #c58853}
+    span.s6 {font-kerning: none; color: #88b966; -webkit-text-stroke: 0px #88b966}
+    span.s7 {font-kerning: none; color: #dfb468; -webkit-text-stroke: 0px #dfb468}
+    span.s8 {font-kerning: none; color: #4a505d; -webkit-text-stroke: 0px #4a505d}
+    span.s9 {font-kerning: none; color: #519ce9; -webkit-text-stroke: 0px #519ce9}
+    span.s10 {font-kerning: none; color: #48a8b5; -webkit-text-stroke: 0px #48a8b5}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3">&lt;</span><span class="s4">html</span><span class="s3"> </span><span class="s5">lang</span><span class="s3">=</span><span class="s1">"zh-CN"</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">meta</span><span class="s1"> </span><span class="s5">charset</span><span class="s1">=</span><span class="s6">"UTF-8"</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">meta</span><span class="s3"> </span><span class="s5">name</span><span class="s3">=</span><span class="s1">"viewport"</span><span class="s3"> </span><span class="s5">content</span><span class="s3">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">title</span><span class="s1">&gt;古风村庄探索&lt;/</span><span class="s4">title</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">style</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">:root</span><span class="s1"> {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">--primary-color</span><span class="s3">: </span><span class="s1">#8B4513</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">--secondary-color</span><span class="s3">: </span><span class="s1">#D2B48C</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">--text-color</span><span class="s3">: </span><span class="s1">#333</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">--light-text</span><span class="s3">: </span><span class="s1">#F5F5DC</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">--shadow</span><span class="s1">: </span><span class="s5">0</span><span class="s1"> </span><span class="s5">4px</span><span class="s1"> </span><span class="s5">8px</span><span class="s1"> </span><span class="s7">rgba</span><span class="s1">(</span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0.2</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">--transition</span><span class="s1">: all </span><span class="s5">0.3s</span><span class="s1"> ease;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>* {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin</span><span class="s1">: </span><span class="s5">0</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">0</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">box-sizing</span><span class="s1">: border-box;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-family</span><span class="s1">: </span><span class="s6">'SimSun'</span><span class="s1">, </span><span class="s6">'宋体'</span><span class="s1">, serif;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">body</span><span class="s1"> {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-color</span><span class="s3">: </span><span class="s5">#F5F5DC</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--text-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">line-height</span><span class="s1">: </span><span class="s5">1.6</span><span class="s1">;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-image</span><span class="s3">: </span><span class="s7">url</span><span class="s3">(</span><span class="s1">'https://img.freepik.com/free-vector/chinese-watercolor-mountain-landscape-background_52683-69025.jpg'</span><span class="s3">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-size</span><span class="s1">: cover;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-attachment</span><span class="s3">: fixed;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-position</span><span class="s1">: center;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">min-height</span><span class="s1">: </span><span class="s5">100vh</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.container</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">max-width</span><span class="s1">: </span><span class="s5">900px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin</span><span class="s1">: </span><span class="s5">0</span><span class="s1"> auto;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">rgba</span><span class="s1">(</span><span class="s5">245</span><span class="s1">, </span><span class="s5">245</span><span class="s1">, </span><span class="s5">220</span><span class="s1">, </span><span class="s5">0.9</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">box-shadow</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--shadow);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-top</span><span class="s1">: </span><span class="s5">30px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-bottom</span><span class="s1">: </span><span class="s5">30px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: </span><span class="s5">1px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">header</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">text-align</span><span class="s1">: center;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-bottom</span><span class="s1">: </span><span class="s5">30px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-bottom</span><span class="s1">: </span><span class="s5">2px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding-bottom</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s4">h1</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">2.5rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-bottom</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">text-shadow</span><span class="s1">: </span><span class="s5">2px</span><span class="s1"> </span><span class="s5">2px</span><span class="s1"> </span><span class="s5">4px</span><span class="s1"> </span><span class="s7">rgba</span><span class="s1">(</span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0.1</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.game-area</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">display</span><span class="s1">: flex;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">flex-direction</span><span class="s1">: column;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">gap</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.scene-description</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--light-text);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">8px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-left</span><span class="s1">: </span><span class="s5">5px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">box-shadow</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--shadow);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">min-height</span><span class="s1">: </span><span class="s5">150px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">1.1rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">line-height</span><span class="s1">: </span><span class="s5">1.8</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.options-container</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">display</span><span class="s1">: flex;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">flex-direction</span><span class="s1">: column;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">gap</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.option-btn</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--light-text);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">12px</span><span class="s1"> </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">transition</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--transition);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">1rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">text-align</span><span class="s1">: left;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.option-btn:hover</span><span class="s3"> {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-color</span><span class="s3">: </span><span class="s5">#A0522D</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">transform</span><span class="s1">: </span><span class="s7">translateY</span><span class="s1">(-</span><span class="s5">2px</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.option-btn:disabled</span><span class="s3"> {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-color</span><span class="s3">: </span><span class="s5">#ccc</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">cursor</span><span class="s1">: not-allowed;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">transform</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.custom-input</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">display</span><span class="s1">: flex;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">gap</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-top</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.custom-input</span><span class="s3"> </span><span class="s4">input</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">flex</span><span class="s1">: </span><span class="s5">1</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">12px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: </span><span class="s5">1px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">1rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.custom-input</span><span class="s3"> </span><span class="s4">button</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--secondary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--text-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">12px</span><span class="s1"> </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">transition</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--transition);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.custom-input</span><span class="s3"> </span><span class="s4">button</span><span class="s1">:hover</span><span class="s3"> {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-color</span><span class="s3">: </span><span class="s5">#CDAA7D</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.status-indicator</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">display</span><span class="s1">: flex;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">align-items</span><span class="s1">: center;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">gap</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-top</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s5">#666</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-style</span><span class="s1">: italic;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.spinner</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: </span><span class="s5">3px</span><span class="s1"> solid </span><span class="s7">rgba</span><span class="s1">(</span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0.1</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">50%</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-top</span><span class="s1">: </span><span class="s5">3px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">width</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">height</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">animation</span><span class="s1">: spin </span><span class="s5">1s</span><span class="s1"> linear infinite;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">@keyframes</span><span class="s1"> spin {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">0%</span><span class="s1"> { </span><span class="s6">transform</span><span class="s1">: </span><span class="s7">rotate</span><span class="s1">(</span><span class="s5">0deg</span><span class="s1">); }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">100%</span><span class="s1"> { </span><span class="s6">transform</span><span class="s1">: </span><span class="s7">rotate</span><span class="s1">(</span><span class="s5">360deg</span><span class="s1">); }</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.login-container</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">text-align</span><span class="s1">: center;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">30px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.login-container</span><span class="s3"> </span><span class="s4">input</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">12px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: </span><span class="s5">1px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">1rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-right</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">width</span><span class="s1">: </span><span class="s5">200px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.login-container</span><span class="s3"> </span><span class="s4">button</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--light-text);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">12px</span><span class="s1"> </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">transition</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--transition);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">1rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.login-container</span><span class="s3"> </span><span class="s4">button</span><span class="s1">:hover</span><span class="s3"> {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-color</span><span class="s3">: </span><span class="s5">#A0522D</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.error-message</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s5">#D32F2F</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-top</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.game-controls</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">display</span><span class="s1">: flex;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">justify-content</span><span class="s1">: space-between;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-top</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding-top</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-top</span><span class="s1">: </span><span class="s5">1px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.history-btn</span><span class="s3">, </span><span class="s1">.reset-btn</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--secondary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--text-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">10px</span><span class="s1"> </span><span class="s5">15px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">transition</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--transition);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.history-btn:hover</span><span class="s3">, </span><span class="s1">.reset-btn:hover</span><span class="s3"> {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">background-color</span><span class="s3">: </span><span class="s5">#CDAA7D</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.modal</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">display</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">position</span><span class="s1">: fixed;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">top</span><span class="s1">: </span><span class="s5">0</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">left</span><span class="s1">: </span><span class="s5">0</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">width</span><span class="s1">: </span><span class="s5">100%</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">height</span><span class="s1">: </span><span class="s5">100%</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">rgba</span><span class="s1">(</span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, </span><span class="s5">0.5</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">z-index</span><span class="s1">: </span><span class="s5">100</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">justify-content</span><span class="s1">: center;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">align-items</span><span class="s1">: center;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.modal-content</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--light-text);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">30px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">width</span><span class="s1">: </span><span class="s5">80%</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">max-width</span><span class="s1">: </span><span class="s5">700px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">max-height</span><span class="s1">: </span><span class="s5">80vh</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">overflow-y</span><span class="s1">: auto;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">box-shadow</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--shadow);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">position</span><span class="s1">: relative;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.close-btn</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">position</span><span class="s1">: absolute;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">top</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">right</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">1.5rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">cursor</span><span class="s1">: pointer;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.history-item</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-bottom</span><span class="s1">: </span><span class="s5">15px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding-bottom</span><span class="s1">: </span><span class="s5">15px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-bottom</span><span class="s1">: </span><span class="s5">1px</span><span class="s1"> dashed </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.history-item:last-child</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-bottom</span><span class="s1">: none;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">.history-title</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-bottom</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.npc-info</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">background-color</span><span class="s1">: </span><span class="s7">rgba</span><span class="s1">(</span><span class="s5">210</span><span class="s1">, </span><span class="s5">180</span><span class="s1">, </span><span class="s5">140</span><span class="s1">, </span><span class="s5">0.3</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">15px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-radius</span><span class="s1">: </span><span class="s5">8px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-top</span><span class="s1">: </span><span class="s5">20px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">border-left</span><span class="s1">: </span><span class="s5">3px</span><span class="s1"> solid </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">.npc-title</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">font-weight</span><span class="s1">: bold;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">color</span><span class="s1">: </span><span class="s7">var</span><span class="s1">(--primary-color);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s6">margin-bottom</span><span class="s1">: </span><span class="s5">5px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">@media</span><span class="s1"> (</span><span class="s6">max-width</span><span class="s1">: </span><span class="s5">768px</span><span class="s1">) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">.container</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">margin</span><span class="s1">: </span><span class="s5">10px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">padding</span><span class="s1">: </span><span class="s5">15px</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s4">h1</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">font-size</span><span class="s1">: </span><span class="s5">2rem</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">.custom-input</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">flex-direction</span><span class="s1">: column;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">.custom-input</span><span class="s1"> </span><span class="s4">button</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s6">width</span><span class="s1">: </span><span class="s5">100%</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s4">style</span><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;/</span><span class="s1">head</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"container"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">        </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"login-screen"</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"login-container"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">h1</span><span class="s1">&gt;古风村庄探索&lt;/</span><span class="s4">h1</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">p</span><span class="s1">&gt;请输入游戏密钥开始您的旅程&lt;/</span><span class="s4">p</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">input</span><span class="s3"> </span><span class="s5">type</span><span class="s3">=</span><span class="s1">"password"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"game-key"</span><span class="s3"> </span><span class="s5">placeholder</span><span class="s3">=</span><span class="s1">"输入游戏密钥"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">button</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"start-game"</span><span class="s1">&gt;开始游戏&lt;/</span><span class="s4">button</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"key-error"</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"error-message"</span><span class="s3">&gt;&lt;/</span><span class="s4">div</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">        </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"game-screen"</span><span class="s3"> </span><span class="s5">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">header</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">h1</span><span class="s1">&gt;古风村庄探索&lt;/</span><span class="s4">h1</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">p</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"location-indicator"</span><span class="s1">&gt;当前位置: 村口&lt;/</span><span class="s4">p</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/</span><span class="s4">header</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s5">class</span><span class="s1">=</span><span class="s6">"game-area"</span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"scene-description"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"scene-text"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>欢迎来到古风村庄探索游戏，请稍等...</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"npc-info"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"npc-info"</span><span class="s3"> </span><span class="s5">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s5">class</span><span class="s1">=</span><span class="s6">"npc-title"</span><span class="s1">&gt;NPC信息&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"npc-details"</span><span class="s1">&gt;&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"options-container"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"options-container"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8"><i>&lt;!-- 选项将在这里动态生成 --&gt;</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"custom-input"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"custom-input"</span><span class="s3"> </span><span class="s5">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s4">input</span><span class="s3"> </span><span class="s5">type</span><span class="s3">=</span><span class="s1">"text"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"user-input"</span><span class="s3"> </span><span class="s5">placeholder</span><span class="s3">=</span><span class="s1">"输入你的回应..."</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s4">button</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"submit-response"</span><span class="s1">&gt;发送&lt;/</span><span class="s4">button</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"status-indicator"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"status-indicator"</span><span class="s3"> </span><span class="s5">style</span><span class="s3">=</span><span class="s1">"display: none;"</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s5">class</span><span class="s1">=</span><span class="s6">"spinner"</span><span class="s1">&gt;&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s4">span</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"status-text"</span><span class="s1">&gt;正在生成故事...&lt;/</span><span class="s4">span</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s5">class</span><span class="s1">=</span><span class="s6">"game-controls"</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">button</span><span class="s1"> </span><span class="s5">class</span><span class="s1">=</span><span class="s6">"history-btn"</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"history-btn"</span><span class="s1">&gt;游玩记录&lt;/</span><span class="s4">button</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>&lt;</span><span class="s4">button</span><span class="s1"> </span><span class="s5">class</span><span class="s1">=</span><span class="s6">"reset-btn"</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"reset-btn"</span><span class="s1">&gt;重置游戏&lt;/</span><span class="s4">button</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"modal"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"history-modal"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">        </span>&lt;</span><span class="s4">div</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"modal-content"</span><span class="s3">&gt;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">span</span><span class="s3"> </span><span class="s5">class</span><span class="s3">=</span><span class="s1">"close-btn"</span><span class="s3"> </span><span class="s5">id</span><span class="s3">=</span><span class="s1">"close-history"</span><span class="s3">&gt;</span><span class="s9">&amp;times;</span><span class="s3">&lt;/</span><span class="s4">span</span><span class="s3">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">h2</span><span class="s1">&gt;游玩记录&lt;/</span><span class="s4">h2</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;</span><span class="s4">div</span><span class="s1"> </span><span class="s5">id</span><span class="s1">=</span><span class="s6">"history-list"</span><span class="s1">&gt;</span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1"><i>&lt;!-- 历史记录将在这里显示 --&gt;</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s4">div</span><span class="s1">&gt;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s4">script</span><span class="s1">&gt;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 游戏状态</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> gameState = {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">currentScene</span><span class="s1">: </span><span class="s10">null</span><span class="s1">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">npcs</span><span class="s1">: {},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">history</span><span class="s1">: [],</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s5">currentSession</span><span class="s1">: {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">scenes</span><span class="s1">: [],</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">startTime</span><span class="s1">: </span><span class="s10">null</span><span class="s1">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">endTime</span><span class="s1">: </span><span class="s10">null</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">apiKey</span><span class="s3">: </span><span class="s1">"sk-rqfksabdnfqsdoiidifygdmkjzvhsfxcupzodalwikxrmajp"</span><span class="s3">,</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">apiUrl</span><span class="s3">: </span><span class="s1">"https://api.siliconflow.cn/v1/chat/completions"</span><span class="s3">,</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">model</span><span class="s3">: </span><span class="s1">"THUDM/glm-4-9b-chat"</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// DOM元素</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> loginScreen = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'login-screen'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> gameScreen = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'game-screen'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> gameKeyInput = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'game-key'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> startGameBtn = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'start-game'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> keyError = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'key-error'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> sceneText = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'scene-text'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> optionsContainer = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'options-container'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> customInput = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'custom-input'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> userInput = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'user-input'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> submitResponse = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'submit-response'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> statusIndicator = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'status-indicator'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> statusText = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'status-text'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> locationIndicator = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'location-indicator'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> npcInfo = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'npc-info'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> npcDetails = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'npc-details'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> historyBtn = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'history-btn'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> resetBtn = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'reset-btn'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> historyModal = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'history-modal'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> closeHistory = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'close-history'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">const</span><span class="s1"> historyList = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">getElementById</span><span class="s1">(</span><span class="s6">'history-list'</span><span class="s1">);</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 事件监听器</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>startGameBtn.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, startGame);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>submitResponse.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, handleCustomInput);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>userInput.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'keypress'</span><span class="s1">, (e) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (e.key === </span><span class="s6">'Enter'</span><span class="s1">) </span><span class="s9">handleCustomInput</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>historyBtn.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, showHistory);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>resetBtn.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, resetGame);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>closeHistory.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, () =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>historyModal.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 点击模态框外部关闭</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s5">window</span><span class="s1">.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, (e) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (e.target === historyModal) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>historyModal.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 开始游戏</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">startGame</span><span class="s1">() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s1"> key = gameKeyInput.value.</span><span class="s9">trim</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (key === </span><span class="s6">'作者最帅'</span><span class="s1">) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>keyError.textContent = </span><span class="s6">''</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>loginScreen.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>gameScreen.style.display = </span><span class="s6">'block'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>gameState.currentSession.startTime = </span><span class="s2">new</span><span class="s1"> </span><span class="s7">Date</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s9">initializeGame</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s2">else</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>keyError.textContent = </span><span class="s6">'密钥不正确，请重新输入'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 初始化游戏</i><i></i></span></p>
+<p class="p1"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s3"> </span><span class="s1">initializeGame</span><span class="s3">() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">showStatus</span><span class="s1">(</span><span class="s6">'正在生成初始场景...'</span><span class="s1">);</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s3"> prompt = </span><span class="s1">`你是一个古风村庄探索游戏的AI叙事者。请为玩家生成游戏的第一个场景，描述玩家来到一个古风村庄的村口所见所闻。</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>要求：</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>1. 描述村庄的环境、氛围和特色</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>2. 提供2-3个选项让玩家选择下一步行动</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>3. 可以暗示村庄中可能存在的秘密或主线剧情</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>4. 使用中文，语言优美，富有古风韵味</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>输出格式：</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"scene": "场景描述文本",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"options": ["选项1", "选项2", "选项3"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"location": "位置名称",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"hint": "对主线剧情的暗示"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}`</span><span class="s3">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">callAI</span><span class="s1">(prompt).</span><span class="s9">then</span><span class="s1">(response =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">try</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> data = </span><span class="s7">JSON</span><span class="s1">.</span><span class="s9">parse</span><span class="s1">(response);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">updateScene</span><span class="s1">(data);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">addToHistory</span><span class="s1">(</span><span class="s6">'游戏开始'</span><span class="s1">, data.scene);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s2">catch</span><span class="s1"> (e) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">console</span><span class="s1">.</span><span class="s9">error</span><span class="s1">(</span><span class="s6">"解析AI响应失败:"</span><span class="s1">, e);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>sceneText.innerHTML = </span><span class="s6">"游戏初始化失败，请稍后再试。&lt;br&gt;&lt;br&gt;错误信息: "</span><span class="s1"> + e.message;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s9">catch</span><span class="s1">(error =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">console</span><span class="s1">.</span><span class="s9">error</span><span class="s1">(</span><span class="s6">"AI调用失败:"</span><span class="s1">, error);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sceneText.innerHTML = </span><span class="s6">"无法连接到游戏服务器，请检查网络连接后重试。"</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s9">finally</span><span class="s1">(() =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s9">hideStatus</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 更新场景</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">updateScene</span><span class="s1">(data) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>gameState.currentScene = data;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>sceneText.innerHTML = data.scene;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>locationIndicator.textContent = </span><span class="s6">`当前位置: </span><span class="s4">${data.location}</span><span class="s6">`</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1"><i>// 如果有NPC信息，显示</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (data.npc) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>npcDetails.innerHTML = </span><span class="s6">`&lt;strong&gt;</span><span class="s4">${data.npc.name}</span><span class="s6">&lt;/strong&gt;&lt;br&gt;</span><span class="s4">${data.npc.description}</span><span class="s6">`</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>npcInfo.style.display = </span><span class="s6">'block'</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8"><i>// 添加到NPC列表</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">if</span><span class="s1"> (!gameState.npcs[data.npc.name]) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>gameState.npcs[data.npc.name] = data.npc;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s2">else</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>npcInfo.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8"><i>// 清空选项容器</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>optionsContainer.innerHTML = </span><span class="s6">''</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8"><i>// 添加选项按钮</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (data.options &amp;&amp; data.options.length &gt; </span><span class="s5">0</span><span class="s1">) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>data.options.</span><span class="s9">forEach</span><span class="s1">((option, index) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> btn = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">createElement</span><span class="s1">(</span><span class="s6">'button'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>btn.className = </span><span class="s6">'option-btn'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>btn.textContent = option;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>btn.</span><span class="s9">addEventListener</span><span class="s1">(</span><span class="s6">'click'</span><span class="s1">, () =&gt; </span><span class="s9">selectOption</span><span class="s1">(index));</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>optionsContainer.</span><span class="s9">appendChild</span><span class="s1">(btn);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8"><i>// 显示自定义输入提示</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">const</span><span class="s1"> customPrompt = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">createElement</span><span class="s1">(</span><span class="s6">'div'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>customPrompt.style.marginTop = </span><span class="s6">'10px'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>customPrompt.style.fontStyle = </span><span class="s6">'italic'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>customPrompt.textContent = </span><span class="s6">'或者，你也可以直接输入你想说的话或行动...'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>optionsContainer.</span><span class="s9">appendChild</span><span class="s1">(customPrompt);</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s8"><i>// 显示自定义输入框</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>customInput.style.display = </span><span class="s6">'flex'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>userInput.</span><span class="s9">focus</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s2">else</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>customInput.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8"><i>// 添加到当前会话记录</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>gameState.currentSession.scenes.</span><span class="s9">push</span><span class="s1">({</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">scene</span><span class="s1">: data.scene,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">options</span><span class="s1">: data.options,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">timestamp</span><span class="s1">: </span><span class="s2">new</span><span class="s1"> </span><span class="s7">Date</span><span class="s1">()</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 选择选项</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">selectOption</span><span class="s1">(index) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s1"> selectedOption = gameState.currentScene.options[index];</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">addToHistory</span><span class="s1">(</span><span class="s6">'你的选择'</span><span class="s1">, selectedOption);</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">showStatus</span><span class="s1">(</span><span class="s6">'正在生成下一场景...'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">disableOptions</span><span class="s1">();</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8"><i>// 构建提示词</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s2">let</span><span class="s3"> prompt = </span><span class="s1">`作为古风村庄探索游戏的AI叙事者，玩家刚刚选择了"</span><span class="s4">${selectedOption}</span><span class="s1">"。</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>之前的情节:</span></p>
+<p class="p3"><span class="s6"><span class="Apple-converted-space">            </span></span><span class="s1">${gameState.currentScene.scene}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>玩家选择: </span><span class="s4">${selectedOption}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>请根据这个选择生成下一场景:</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>1. 详细描述场景变化和发生的事情</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>2. 提供2-3个新的选项</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>3. 保持古风语言风格</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>4. 如果遇到NPC，生成NPC的姓名、外貌、性格描述</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>5. 逐步揭示村庄的秘密或主线剧情</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>输出格式:</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"scene": "场景描述文本",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"options": ["选项1", "选项2", "选项3"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"location": "位置名称",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"npc": {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"name": "NPC姓名",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"description": "NPC外貌和性格描述"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"hint": "对主线剧情的进一步暗示"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}`</span><span class="s3">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1"><i>// 如果有NPC，添加到提示词</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (gameState.currentScene.npc) {</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">                </span>prompt += </span><span class="s6">`\n\n当前NPC: </span><span class="s1">${</span><span class="s7">JSON</span><span class="s1">.stringify(gameState.currentScene.npc)}</span><span class="s6">`</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1"><i>// 调用AI生成下一场景</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">callAI</span><span class="s1">(prompt).</span><span class="s9">then</span><span class="s1">(response =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">try</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> data = </span><span class="s7">JSON</span><span class="s1">.</span><span class="s9">parse</span><span class="s1">(response);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">updateScene</span><span class="s1">(data);</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s8"><i>// 检查是否是结局</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">if</span><span class="s1"> (data.isEnding) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>gameState.currentSession.endTime = </span><span class="s2">new</span><span class="s1"> </span><span class="s7">Date</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span></span><span class="s9">addToHistory</span><span class="s1">(</span><span class="s6">'游戏结束'</span><span class="s1">, data.scene);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s2">catch</span><span class="s1"> (e) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">console</span><span class="s1">.</span><span class="s9">error</span><span class="s1">(</span><span class="s6">"解析AI响应失败:"</span><span class="s1">, e);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>sceneText.innerHTML = </span><span class="s6">"场景生成失败，请稍后再试。&lt;br&gt;&lt;br&gt;错误信息: "</span><span class="s1"> + e.message;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s9">catch</span><span class="s1">(error =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">console</span><span class="s1">.</span><span class="s9">error</span><span class="s1">(</span><span class="s6">"AI调用失败:"</span><span class="s1">, error);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sceneText.innerHTML = </span><span class="s6">"无法生成下一场景，请检查网络连接后重试。"</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s9">finally</span><span class="s1">(() =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s9">hideStatus</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 处理自定义输入</i><i></i></span></p>
+<p class="p1"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s3"> </span><span class="s1">handleCustomInput</span><span class="s3">() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s1"> inputText = userInput.value.</span><span class="s9">trim</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (!inputText) </span><span class="s2">return</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">addToHistory</span><span class="s1">(</span><span class="s6">'你的话语'</span><span class="s1">, inputText);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>userInput.value = </span><span class="s6">''</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">showStatus</span><span class="s1">(</span><span class="s6">'正在生成回应...'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">disableOptions</span><span class="s1">();</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8"><i>// 构建提示词</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s2">let</span><span class="s3"> prompt = </span><span class="s1">`作为古风村庄探索游戏的AI叙事者，玩家没有选择预设选项，而是说了:"</span><span class="s4">${inputText}</span><span class="s1">"。</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>当前场景:</span></p>
+<p class="p3"><span class="s6"><span class="Apple-converted-space">            </span></span><span class="s1">${gameState.currentScene.scene}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>玩家输入: </span><span class="s4">${inputText}</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>请根据玩家的输入生成适当的回应和场景发展:</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>1. 首先回应玩家的话语</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>2. 描述场景的任何变化</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>3. 提供2-3个新的选项</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>4. 保持古风语言风格</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>5. 如果引入新NPC，提供其描述</span></p>
+<p class="p8"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>输出格式:</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>{</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"scene": "场景描述文本(包含对玩家输入的回应)",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"options": ["选项1", "选项2", "选项3"],</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"location": "位置名称",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"npc": {</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"name": "NPC姓名",</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                    </span>"description": "NPC外貌和性格描述"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">                </span>"hint": "对主线剧情的进一步暗示"</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span>}`</span><span class="s3">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1"><i>// 如果有NPC，添加到提示词</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (gameState.currentScene.npc) {</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">                </span>prompt += </span><span class="s6">`\n\n当前NPC: </span><span class="s1">${</span><span class="s7">JSON</span><span class="s1">.stringify(gameState.currentScene.npc)}</span><span class="s6">`</span><span class="s3">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s8"><i>// 调用AI生成回应</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s9">callAI</span><span class="s1">(prompt).</span><span class="s9">then</span><span class="s1">(response =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">try</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> data = </span><span class="s7">JSON</span><span class="s1">.</span><span class="s9">parse</span><span class="s1">(response);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s9">updateScene</span><span class="s1">(data);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>} </span><span class="s2">catch</span><span class="s1"> (e) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">console</span><span class="s1">.</span><span class="s9">error</span><span class="s1">(</span><span class="s6">"解析AI响应失败:"</span><span class="s1">, e);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>sceneText.innerHTML = </span><span class="s6">"回应生成失败，请稍后再试。&lt;br&gt;&lt;br&gt;错误信息: "</span><span class="s1"> + e.message;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s9">catch</span><span class="s1">(error =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">console</span><span class="s1">.</span><span class="s9">error</span><span class="s1">(</span><span class="s6">"AI调用失败:"</span><span class="s1">, error);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sceneText.innerHTML = </span><span class="s6">"无法生成回应，请检查网络连接后重试。"</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}).</span><span class="s9">finally</span><span class="s1">(() =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s9">hideStatus</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 调用AI接口</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">async</span><span class="s1"> </span><span class="s2">function</span><span class="s1"> </span><span class="s9">callAI</span><span class="s1">(prompt) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s1"> response = </span><span class="s2">await</span><span class="s1"> </span><span class="s9">fetch</span><span class="s1">(gameState.apiUrl, {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">method</span><span class="s1">: </span><span class="s6">'POST'</span><span class="s1">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">headers</span><span class="s1">: {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">'Content-Type'</span><span class="s3">: </span><span class="s1">'application/json'</span><span class="s3">,</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">'Authorization'</span><span class="s3">: </span><span class="s1">`Bearer </span><span class="s4">${gameState.apiKey}</span><span class="s1">`</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">body</span><span class="s1">: </span><span class="s7">JSON</span><span class="s1">.</span><span class="s9">stringify</span><span class="s1">({</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">model</span><span class="s1">: gameState.model,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">messages</span><span class="s1">: [</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>{</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s5">role</span><span class="s1">: </span><span class="s6">'user'</span><span class="s1">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                            </span></span><span class="s5">content</span><span class="s1">: prompt</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>],</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">temperature</span><span class="s1">: </span><span class="s5">0.7</span><span class="s1">,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">max_tokens</span><span class="s1">: </span><span class="s5">2000</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (!response.ok) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s2">throw</span><span class="s1"> </span><span class="s2">new</span><span class="s1"> </span><span class="s7">Error</span><span class="s1">(</span><span class="s6">`API请求失败: </span><span class="s4">${response.status}</span><span class="s6">`</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s1"> data = </span><span class="s2">await</span><span class="s1"> response.</span><span class="s9">json</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">return</span><span class="s1"> data.choices[</span><span class="s5">0</span><span class="s1">].message.content;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 显示状态指示器</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">showStatus</span><span class="s1">(message) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>statusText.textContent = message;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.style.display = </span><span class="s6">'flex'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 隐藏状态指示器</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">hideStatus</span><span class="s1">() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>statusIndicator.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 禁用所有选项按钮</i><i></i></span></p>
+<p class="p1"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s3"> </span><span class="s1">disableOptions</span><span class="s3">() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">const</span><span class="s1"> buttons = optionsContainer.</span><span class="s9">querySelectorAll</span><span class="s1">(</span><span class="s6">'.option-btn'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>buttons.</span><span class="s9">forEach</span><span class="s1">(btn =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>btn.disabled = </span><span class="s10">true</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>submitResponse.disabled = </span><span class="s10">true</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 添加到历史记录</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">addToHistory</span><span class="s1">(type, content) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>gameState.history.</span><span class="s9">push</span><span class="s1">({</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>type,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>content,</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s5">timestamp</span><span class="s1">: </span><span class="s2">new</span><span class="s1"> </span><span class="s7">Date</span><span class="s1">()</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p7"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1"><i>// 显示历史记录</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">showHistory</span><span class="s1">() {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>historyList.innerHTML = </span><span class="s6">''</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s1"> (gameState.history.length === </span><span class="s5">0</span><span class="s1">) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>historyList.innerHTML = </span><span class="s6">'&lt;p&gt;暂无历史记录&lt;/p&gt;'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>} </span><span class="s2">else</span><span class="s1"> {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>gameState.history.</span><span class="s9">forEach</span><span class="s1">((item, index) =&gt; {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> historyItem = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">createElement</span><span class="s1">(</span><span class="s6">'div'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>historyItem.className = </span><span class="s6">'history-item'</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> title = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">createElement</span><span class="s1">(</span><span class="s6">'div'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>title.className = </span><span class="s6">'history-title'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>title.textContent = </span><span class="s6">`</span><span class="s4">${index + </span><span class="s5">1</span><span class="s4">}</span><span class="s6">. </span><span class="s4">${item.type}</span><span class="s6">`</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> content = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">createElement</span><span class="s1">(</span><span class="s6">'div'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>content.textContent = item.content;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s2">const</span><span class="s1"> time = </span><span class="s5">document</span><span class="s1">.</span><span class="s9">createElement</span><span class="s1">(</span><span class="s6">'div'</span><span class="s1">);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>time.style.fontSize = </span><span class="s6">'0.8rem'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>time.style.color = </span><span class="s6">'#666'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>time.textContent = item.timestamp.</span><span class="s9">toLocaleString</span><span class="s1">();</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                    </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>historyItem.</span><span class="s9">appendChild</span><span class="s1">(title);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>historyItem.</span><span class="s9">appendChild</span><span class="s1">(content);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>historyItem.</span><span class="s9">appendChild</span><span class="s1">(time);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span>historyList.</span><span class="s9">appendChild</span><span class="s1">(historyItem);</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>historyModal.style.display = </span><span class="s6">'flex'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s8"><i>// 重置游戏</i><i></i></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span></span><span class="s2">function</span><span class="s1"> </span><span class="s9">resetGame</span><span class="s1">() {</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s2">if</span><span class="s3"> (</span><span class="s9">confirm</span><span class="s3">(</span><span class="s1">'确定要重置游戏吗？这将清除当前进度，但历史记录会保留。'</span><span class="s3">)) {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>gameState.currentScene = </span><span class="s10">null</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>gameState.npcs = {};</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>gameState.currentSession = {</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">scenes</span><span class="s1">: [],</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">startTime</span><span class="s1">: </span><span class="s2">new</span><span class="s1"> </span><span class="s7">Date</span><span class="s1">(),</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                    </span></span><span class="s5">endTime</span><span class="s1">: </span><span class="s10">null</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>};</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>sceneText.textContent = </span><span class="s6">'正在重新初始化游戏...'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>optionsContainer.innerHTML = </span><span class="s6">''</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>customInput.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span>npcInfo.style.display = </span><span class="s6">'none'</span><span class="s1">;</span></p>
+<p class="p6"><span class="s1"><span class="Apple-converted-space">                </span></span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">                </span></span><span class="s9">initializeGame</span><span class="s1">();</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s4">script</span><span class="s1">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;/</span><span class="s1">body</span><span class="s3">&gt;</span></p>
+<p class="p3"><span class="s3">&lt;/</span><span class="s1">html</span><span class="s3">&gt;</span></p>
+</body>
+</html>
